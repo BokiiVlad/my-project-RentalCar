@@ -1,0 +1,22 @@
+.headerBox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  background-color: #f2f4f7;
+}
+.link {
+  font-weight: 500;
+  line-height: 125%;
+  text-align: center;
+}
+.active {
+  font-weight: 500;
+  line-height: 125%;
+  text-align: center;
+  color: #0b44cd;
+}
+.navBox {
+  display: flex;
+  gap: 32px;
+}

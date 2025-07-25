@@ -13,6 +13,7 @@
 }
 .box {
   display: block;
+  margin-top: 20px;
 }
 .countryBox {
   display: flex;

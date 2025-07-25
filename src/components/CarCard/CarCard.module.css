@@ -17,6 +17,7 @@
 .textBox {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 4px;
 }
 .divider {
   width: 2px;
@@ -25,4 +26,19 @@
 }
 .button {
   margin-top: 28px;
+}
+.svg {
+  stroke: #dadde1;
+}
+.strokeBox {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.navigation {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  color: #8d929a;
+  margin-bottom: 4px;
 }

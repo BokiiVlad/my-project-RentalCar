@@ -5,6 +5,8 @@ import App from "./components/App/App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store.js";
+import "react-datepicker/dist/react-datepicker.css";
+import "./components/MyDatePicker/MyDatePicker.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

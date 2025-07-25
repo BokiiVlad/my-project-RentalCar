@@ -1,5 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import style from "./BookingForm.module.css";
+import "react-datepicker/dist/react-datepicker.css";
+import FormikDatePicker from "../../components/MyDatePicker/MyDatePicker.jsx";
 
 const BookingForm = () => {
   const initialValues = {
@@ -31,12 +33,9 @@ const BookingForm = () => {
                 type="email"
                 placeholder="Email"
               ></Field>
-              <Field
-                className={style.input}
-                name="calendar"
-                type="email"
-                placeholder="Booking Date"
-              ></Field>
+              <div>
+                <FormikDatePicker />
+              </div>
               <Field
                 className={style.inputComment}
                 name="comment"

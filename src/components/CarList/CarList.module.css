@@ -1,0 +1,11 @@
+.listBox {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.listElement {
+  width: 276px;
+  /* height: 424px; */
+}

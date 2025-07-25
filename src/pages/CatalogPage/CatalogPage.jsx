@@ -4,17 +4,26 @@ import { selectCar } from "../../redux/cars/selectors.js";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCar } from "../../redux/cars/operations.js";
 import Filters from "../../components/Filters/Filters.jsx";
+import ButMore from "../../components/ButMore/ButMore.jsx";
+import { selectHasMore } from "../../redux/cars/selectors.js";
+import LayoutForCatalog from "../../components/LayoutForCatalog/LayoutForCatalog.jsx";
 
 const CatalogPage = () => {
-  //   const dispatch = useDispatch();
-  //   const cars = useSelector(selectCar);
-  //   useEffect(() => {
-  //     dispatch(fetchCar());
-  //   }, [dispatch]);
-  //   return <>{cars.length > 0 ? <CarList /> : <p>Car not found.</p>}</>;
+  const dispatch = useDispatch();
+  const cars = useSelector(selectCar);
+  const hasMore = useSelector(selectHasMore);
+
+  useEffect(() => {
+    dispatch(fetchCar());
+  }, [dispatch]);
+
   return (
     <>
-      <Filters />
+      <LayoutForCatalog>
+        <Filters />
+        {cars.length > 0 ? <CarList /> : <p>Car not found.</p>}
+        {hasMore && <ButMore />}
+      </LayoutForCatalog>
     </>
   );
 };

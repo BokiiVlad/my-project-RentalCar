@@ -8,6 +8,9 @@ const slice = createSlice({
         error: false,
         loading: false,
         hasMore: false,
+        totalCars: 0,
+        page: 0,
+        totalPages: 0,
     },
     reducers: {
     },
@@ -16,7 +19,11 @@ const slice = createSlice({
             state.error = false;
             state.loading = true;
         }).addCase(fetchCar.fulfilled, (state, action) => {
-            state.cars = action.payload;
+            state.cars = action.payload.cars;
+            state.totalCars = action.payload.totalCars;
+            state.page = action.payload.page;
+            state.totalPages = action.payload.totalPages;
+            state.hasMore = action.payload.page < action.payload.totalPages;
             state.loading = false;
         }).addCase(fetchCar.rejected, (state) => {
             state.error = true;

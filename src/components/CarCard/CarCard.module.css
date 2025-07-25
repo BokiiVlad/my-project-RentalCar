@@ -1,0 +1,28 @@
+.imgBox {
+  margin-bottom: 16px;
+  border-radius: 14px;
+  width: 276px;
+  height: 268px;
+}
+.cardBox {
+}
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+}
+.span {
+  color: #3470ff;
+}
+.textBox {
+  display: flex;
+  justify-content: space-between;
+}
+.divider {
+  width: 2px;
+  height: 16px;
+  background-color: #dadde1;
+}
+.button {
+  margin-top: 28px;
+}

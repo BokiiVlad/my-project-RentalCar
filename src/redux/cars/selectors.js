@@ -1,5 +1,5 @@
 
-export const selectCar = (state) => state.car.cars || [];
-export const selectLoading = (state) => state.car.loading;
-export const selectError = (state) => state.car.error;
-export const selectHasMore = (state) => state.car.hasMore;
+export const selectCar = (state) => state.cars.cars || [];
+export const selectLoading = (state) => state.cars.loading;
+export const selectError = (state) => state.cars.error;
+export const selectHasMore = (state) => state.cars.hasMore;

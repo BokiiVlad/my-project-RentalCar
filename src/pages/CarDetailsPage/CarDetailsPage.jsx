@@ -8,26 +8,29 @@ import RentalCondition from "../../components/RentalCondition/RentalCondition.js
 import CarSpecification from "../../components/CarSpecification/CarSpecification.jsx";
 import AccessoriesList from "../../components/AccessoriesList/AccessoriesList.jsx";
 import BookingForm from "../../components/BookingForm/BookingForm.jsx";
+import ContainerForDatails from "../../components/ContainerForDatails/ContainerForDatails.jsx";
 
 const CarDetailsPage = () => {
   const { id } = useParams();
   const allCar = useSelector(selectCar);
   const car = allCar.find((car) => car.id === id);
   return (
-    <div className={style.box}>
-      <div className={style.formImgBox}>
-        <CarImage car={car} />
-        <BookingForm />
-      </div>
-      <div className={style.allTextBox}>
-        <CarOverview car={car} />
-        <div className={style.detailTextBox}>
-          <RentalCondition car={car} />
-          <CarSpecification car={car} />
-          <AccessoriesList car={car} />
+    <ContainerForDatails>
+      <div className={style.box}>
+        <div className={style.formImgBox}>
+          <CarImage car={car} />
+          <BookingForm />
+        </div>
+        <div className={style.allTextBox}>
+          <CarOverview car={car} />
+          <div className={style.detailTextBox}>
+            <RentalCondition car={car} />
+            <CarSpecification car={car} />
+            <AccessoriesList car={car} />
+          </div>
         </div>
       </div>
-    </div>
+    </ContainerForDatails>
   );
 };
 

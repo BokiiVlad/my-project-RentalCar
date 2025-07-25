@@ -1,0 +1,56 @@
+.mainText {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 8px;
+}
+.box {
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+  padding: 32px;
+  width: 640px;
+  height: 488px;
+  background: #fff;
+}
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8d929a;
+  margin-bottom: 24px;
+}
+.input {
+  border-radius: 12px;
+  padding: 12px 20px;
+  width: 576px;
+  height: 48px;
+  background: #f7f7f7;
+}
+.inputComment {
+  border-radius: 12px;
+  padding: 12px 20px 56px 20px;
+  width: 576px;
+  height: 88px;
+  background: #f7f7f7;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.button {
+  color: #fff;
+  display: block;
+  border-radius: 12px;
+  padding: 12px 51px;
+  width: 156px;
+  height: 44px;
+  background: #3470ff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+}
+
+.button:hover {
+  background: #0b44cd;
+}

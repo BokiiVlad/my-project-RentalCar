@@ -1,11 +1,50 @@
-.text {
+.brand {
+  text-align: left;
   font-weight: 600;
   font-size: 24px;
   line-height: 133%;
-  text-align: center;
   color: #101828;
+}
+.brandBox {
   margin-bottom: 8px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 .box {
   display: block;
+}
+.countryBox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.svg {
+  margin-right: 6px;
+}
+.textLocation {
+  margin-right: 16px;
+  color: #101828;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+}
+.price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: #3470ff;
+  margin-bottom: 32px;
+}
+.description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #101828;
+}
+.id {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8d929a;
 }

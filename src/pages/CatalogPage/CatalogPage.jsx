@@ -8,16 +8,18 @@ import ButMore from "../../components/ButMore/ButMore.jsx";
 import { selectHasMore } from "../../redux/cars/selectors.js";
 import LayoutForCatalog from "../../components/LayoutForCatalog/LayoutForCatalog.jsx";
 import { selectPage } from "../../redux/cars/selectors.js";
+import { selectFilterParams } from "../../redux/filters/selectors.js";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
   const cars = useSelector(selectCar);
   const hasMore = useSelector(selectHasMore);
   const page = useSelector(selectPage);
+  const filter = useSelector(selectFilterParams);
 
   useEffect(() => {
-    dispatch(fetchCar(page));
-  }, [dispatch, page]);
+    dispatch(fetchCar({ page, filter }));
+  }, [dispatch, page, filter]);
 
   return (
     <>

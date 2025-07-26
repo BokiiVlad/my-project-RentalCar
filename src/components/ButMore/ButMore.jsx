@@ -6,7 +6,6 @@ const ButMore = () => {
   const dispatch = useDispatch();
   const handleClick = () => {
     dispatch(incrementPage());
-    console.log("hello");
   };
 
   return (

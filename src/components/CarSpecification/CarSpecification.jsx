@@ -7,25 +7,25 @@ const CarSpecification = ({ car }) => {
       <div className={style.itemsBox}>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../assets/sprite/sprite.svg#icon-calendar"></use>
+            <use href="../../../public/sprite/sprite.svg#icon-calendar"></use>
           </svg>
           <p className={style.text}>Year: {car.year}</p>
         </div>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../assets/sprite/sprite.svg#icon-car"></use>
+            <use href="../../../public/sprite/sprite.svg#icon-car"></use>
           </svg>
           <p className={style.text}>Type: {car.type}</p>
         </div>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../assets/sprite/sprite.svg#icon-fuel-pump"></use>
+            <use href="../../../public/sprite/sprite.svg#icon-fuel-pump"></use>
           </svg>
           <p className={style.text}>Fuel Consumption: {car.fuelConsumption}</p>
         </div>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../assets/sprite/sprite.svg#icon-gear"></use>
+            <use href="../../../public/sprite/sprite.svg#icon-gear"></use>
           </svg>
           <p className={style.text}>Engine Size: {car.engineSize}</p>
         </div>

@@ -7,19 +7,19 @@ const RentalCondition = ({ car }) => {
       <div className={style.itemsBox}>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../assets/sprite/sprite.svg#icon-check"></use>
+            <use href="../../../public/sprite/sprite.svg#icon-check"></use>
           </svg>
           <p className={style.text}>{car.rentalConditions[0]}</p>
         </div>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../assets/sprite/sprite.svg#icon-check"></use>
+            <use href="../../../public/sprite/sprite.svg#icon-check"></use>
           </svg>
           <p className={style.text}>{car.rentalConditions[1]}</p>
         </div>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../assets/sprite/sprite.svg#icon-check"></use>
+            <use href="../../../public/sprite/sprite.svg#icon-check"></use>
           </svg>
           <p className={style.text}>{car.rentalConditions[2]}</p>
         </div>

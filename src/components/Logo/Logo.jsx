@@ -7,7 +7,7 @@ const Logo = () => {
       <svg className={style.logo} width="104" height="16">
         <use
           className={style.use}
-          href="../../../assets/sprite/sprite.svg#icon-hover"
+          href="../../../public/sprite/sprite.svg#icon-hover"
         />
       </svg>
     </Link>

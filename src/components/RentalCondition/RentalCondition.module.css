@@ -13,6 +13,7 @@
 .svg {
   display: flex;
   align-items: center;
+  stroke: #101828;
 }
 .itemsBox {
   display: flex;

@@ -16,7 +16,6 @@ export const fetchCar = createAsyncThunk(
                     maxMileage: filter.maxMileage || undefined,
                 },
             });
-            console.log({ ...res.data, page })
             return { ...res.data, page };
         } catch (error) {
             return thunkAPI.rejectWithValue(error.message);

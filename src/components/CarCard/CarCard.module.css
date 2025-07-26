@@ -41,3 +41,18 @@
   color: #8d929a;
   margin-bottom: 4px;
 }
+.svgHeartDefault {
+  fill: #f2f4f7;
+}
+.cardBox {
+  position: relative;
+}
+.heartBut {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  right: 16px;
+}
+.svgHeartActive {
+  fill: #3470ff;
+}

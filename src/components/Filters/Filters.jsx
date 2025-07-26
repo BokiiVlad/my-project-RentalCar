@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchBrand } from "../../redux/filters/operations.js";
 import { selectBrands } from "../../redux/filters/selectors.js";
 import { addFilters } from "../../redux/filters/filtersSlice.js";
+import FormattedMileageInput from "../FormattedMileageInput/FormattedMileageInput.jsx";
 
 const Filters = () => {
   const price = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200];
@@ -77,19 +78,15 @@ const Filters = () => {
           <div>
             <label className={style.label}>Car mileage / km</label>
             <div>
-              <Field
+              <FormattedMileageInput
                 className={style.inputFrom}
-                type="number"
                 name="minMileage"
                 placeholder="From"
-                id="minMileage"
               />
-              <Field
+              <FormattedMileageInput
                 className={style.inputTo}
-                type="number"
                 name="maxMileage"
                 placeholder="To"
-                id="maxMileage"
               />
             </div>
           </div>

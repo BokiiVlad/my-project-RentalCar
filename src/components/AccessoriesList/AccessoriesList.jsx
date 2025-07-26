@@ -7,37 +7,37 @@ const AccessoriesList = ({ car }) => {
       <div className={style.itemsBox}>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../public/sprite/sprite.svg#icon-check"></use>
+            <use href="/sprite/sprite.svg#icon-check"></use>
           </svg>
           <p className={style.text}>{car.accessories[0]}</p>
         </div>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../public/sprite/sprite.svg#icon-check"></use>
+            <use href="/sprite/sprite.svg#icon-check"></use>
           </svg>
           <p className={style.text}>{car.accessories[1]}</p>
         </div>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../public/sprite/sprite.svg#icon-check"></use>
+            <use href="/sprite/sprite.svg#icon-check"></use>
           </svg>
           <p className={style.text}>{car.accessories[2]}</p>
         </div>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../public/sprite/sprite.svg#icon-check"></use>
+            <use href="/sprite/sprite.svg#icon-check"></use>
           </svg>
           <p className={style.text}>{car.functionalities[0]}</p>
         </div>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../public/sprite/sprite.svg#icon-check"></use>
+            <use href="/sprite/sprite.svg#icon-check"></use>
           </svg>
           <p className={style.text}>{car.functionalities[1]}</p>
         </div>
         <div className={style.boxElem}>
           <svg width="16px" height="16px">
-            <use href="../../../public/sprite/sprite.svg#icon-check"></use>
+            <use href="/sprite/sprite.svg#icon-check"></use>
           </svg>
           <p className={style.text}>{car.functionalities[2]}</p>
         </div>

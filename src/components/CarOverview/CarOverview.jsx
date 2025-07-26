@@ -17,7 +17,7 @@ const CarOverview = ({ car }) => {
       </div>
       <div className={style.countryBox}>
         <svg className={style.svg} width="16px" height="16px">
-          <use href="../../../public/sprite/sprite.svg#icon-navigation"></use>
+          <use href="sprite/sprite.svg#icon-navigation"></use>
         </svg>
         <p className={style.textLocation}>
           {city}, {country}

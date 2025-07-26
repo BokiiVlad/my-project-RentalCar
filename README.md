@@ -1,12 +1,69 @@
-# React + Vite
+# RentalCar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+RentalCar is a responsive web application for browsing and renting cars. It allows users to filter vehicles by brand, rental price, and mileage, add cars to favorites, and view detailed information about each listing.
 
-Currently, two official plugins are available:
+### 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Visit RentalCar App](https://my-project-rental-car.vercel.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- Car catalog with brand, price, and mileage filters
+- Car detail page with rental terms
+- Add/remove cars from favorites
+- Persisted state with Redux & Redux Persist
+- Responsive design
+- Custom date selection for rental
+- Form validation with Formik
+
+---
+
+## 🛠 Tech Stack
+
+- **React** 19
+- **Redux Toolkit** & **React-Redux**
+- **React Router DOM**
+- **Redux Persist**
+- **Formik**
+- **React Datepicker**
+- **Axios**
+- **Vite**
+- **CSS Modules**
+- **ESLint**
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/BokiiVlad/my-project-RentalCar
+cd rentalcar-project
+npm install
+npm run dev
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── public/
+├── components/
+├── pages/
+├── redux/
+│   ├── cars/
+│   ├── filters/
+│   └── favorites/
+├── main.jsx
+└── index.css
+```
+
+---
+
+## 👤 Author
+
+**Vladyslav Bokii**  
+[LinkedIn Profile](https://www.linkedin.com/in/vladbokii/)

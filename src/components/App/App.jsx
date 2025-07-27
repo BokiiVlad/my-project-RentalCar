@@ -1,21 +1,30 @@
-import { Route, Router, Routes } from "react-router-dom";
-import HomePage from "../../pages/HomePage/HomePage.jsx";
-import CatalogPage from "../../pages/CatalogPage/CatalogPage.jsx";
-import CarDetailsPage from "../../pages/CarDetailsPage/CarDetailsPage.jsx";
-import NotFound from "../../pages/NotFound/NotFound.jsx";
+import { lazy, Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "../Header/Header.jsx";
 import style from "./App.module.css";
+import Loader from "../Loader/Loader.jsx";
+
+const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));
+const CatalogPage = lazy(() =>
+  import("../../pages/CatalogPage/CatalogPage.jsx")
+);
+const CarDetailsPage = lazy(() =>
+  import("../../pages/CarDetailsPage/CarDetailsPage.jsx")
+);
+const NotFound = lazy(() => import("../../pages/NotFound/NotFound.jsx"));
 
 function App() {
   return (
     <div className={style.container}>
       <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/catalog" element={<CatalogPage />} />
-        <Route path="/catalog/:id" element={<CarDetailsPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog/:id" element={<CarDetailsPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }

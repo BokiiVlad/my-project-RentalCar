@@ -29,10 +29,29 @@ const CustomSelect = ({
 
   return (
     <div className={style.wrapper} ref={ref}>
-      <label className={style.label}>{labelName}</label>
+      <label htmlFor={`${name}-input`} className={style.label}>
+        {labelName}
+      </label>
+
+      {/* прихований input для зв’язку з label */}
+      <input
+        type="text"
+        id={`${name}-input`}
+        value={values[name]}
+        readOnly
+        className={style.hiddenInput}
+        aria-hidden="true"
+        tabIndex={-1}
+      />
+
       <div
         className={style.inputPrice}
         onClick={() => setOpen((prev) => !prev)}
+        role="combobox"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-labelledby={`${name}-input`}
+        tabIndex={0}
       >
         <span className={style.selectedText}>
           {values[name] || placeholder || "Select an option"}
@@ -49,11 +68,14 @@ const CustomSelect = ({
       </div>
 
       {open && (
-        <ul className={style.list}>
+        <ul className={style.list} role="listbox">
           <li
             className={style.items}
             key="reset"
             onClick={() => handleSelect("")}
+            id={`${name}-option-reset`}
+            role="option"
+            aria-selected={values[name] === ""}
           >
             {placeholder}
           </li>
@@ -63,6 +85,9 @@ const CustomSelect = ({
               className={style.items}
               key={opt}
               onClick={() => handleSelect(opt)}
+              id={`${name}-option-${opt}`}
+              role="option"
+              aria-selected={values[name] === opt}
             >
               {opt}
             </li>

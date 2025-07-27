@@ -64,26 +64,27 @@ const Filters = () => {
               />
             )}
           </Field>
-
           <div>
-            <label className={style.label}>Car mileage / km</label>
+            <label htmlFor="minMileage" className={style.label}>
+              Car mileage / km
+            </label>
             <div className={style.mileageBox}>
               <FormattedMileageInput
-                className={style.inputFrom}
+                id="minMileage"
                 name="minMileage"
                 placeholder="From"
                 prefix="From"
+                className={style.inputFrom}
               />
-
               <FormattedMileageInput
-                className={style.inputTo}
+                id="maxMileage"
                 name="maxMileage"
                 placeholder="To"
                 prefix="To"
+                className={style.inputTo}
               />
             </div>
           </div>
-
           <button className={style.but} type="submit">
             Submit
           </button>

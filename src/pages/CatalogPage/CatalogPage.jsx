@@ -9,6 +9,7 @@ import { selectHasMore } from "../../redux/cars/selectors.js";
 import LayoutForCatalog from "../../components/LayoutForCatalog/LayoutForCatalog.jsx";
 import { selectPage } from "../../redux/cars/selectors.js";
 import { selectFilterParams } from "../../redux/filters/selectors.js";
+import NotCar from "../../components/NotCar/NotCar.jsx";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ const CatalogPage = () => {
     <>
       <LayoutForCatalog>
         <Filters />
-        {cars.length > 0 ? <CarList /> : <p>Car not found.</p>}
+        {cars.length > 0 ? <CarList /> : <NotCar />}
         {hasMore && <ButMore />}
       </LayoutForCatalog>
     </>

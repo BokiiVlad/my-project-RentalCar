@@ -1,0 +1,16 @@
+.notCarContainer {
+  text-align: center;
+  margin-top: 50px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.notCarContainer h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.notCarContainer p {
+  font-size: 16px;
+  color: #666;
+}

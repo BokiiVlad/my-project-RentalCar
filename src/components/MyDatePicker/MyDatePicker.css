@@ -57,3 +57,6 @@
   color: #8d929a;
   text-transform: uppercase;
 }
+.react-datepicker__close-icon {
+  right: +10px;
+}

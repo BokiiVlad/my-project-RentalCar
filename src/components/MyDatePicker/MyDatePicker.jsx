@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useField, useFormikContext } from "formik";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import style from "./MyDatePicker.module.css";
@@ -6,8 +7,9 @@ import style from "./MyDatePicker.module.css";
 import { registerLocale } from "react-datepicker";
 import enUS from "date-fns/locale/en-US";
 
-function MyDatePicker() {
-  const [startDate, setStartDate] = useState(null);
+const FormikDatePicker = ({ name }) => {
+  const { setFieldValue } = useFormikContext();
+  const [field] = useField(name);
 
   const customEn = {
     ...enUS,
@@ -28,8 +30,8 @@ function MyDatePicker() {
   return (
     <DatePicker
       className={style.input}
-      selected={startDate}
-      onChange={(date) => setStartDate(date)}
+      selected={field.value}
+      onChange={(val) => setFieldValue(name, val)}
       placeholderText="Booking Date"
       dateFormat="dd.MM.yyyy"
       locale="customEn"
@@ -37,6 +39,6 @@ function MyDatePicker() {
       showPopperArrow={false}
     />
   );
-}
+};
 
-export default MyDatePicker;
+export default FormikDatePicker;

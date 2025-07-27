@@ -52,6 +52,28 @@ npm run dev
 src/
 ├── public/
 ├── components/
+│   ├── AccessoriesList/
+│   ├── App/
+│   ├── BookingForm/
+│   ├── Button/
+│   ├── CarCard/
+│   ├── CarImage/
+│   ├── CarList/
+│   ├── CarOverview/
+│   ├── CarSpecification/
+│   ├── Container/
+│   ├── ContainerForDetails/
+│   ├── CustomSelect/
+│   ├── Filters/
+│   ├── FormattedMileageInput/
+│   ├── Header/
+│   ├── HeroSection/
+│   ├── LayoutForCatalog/
+│   ├── Loader/
+│   ├── Logo/
+│   ├── MyDatePicker/
+│   ├── NotCar/
+│   └── RentalCondition/
 ├── pages/
 ├── redux/
 │   ├── cars/

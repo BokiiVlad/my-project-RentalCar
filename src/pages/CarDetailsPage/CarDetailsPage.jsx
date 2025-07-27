@@ -8,14 +8,20 @@ import RentalCondition from "../../components/RentalCondition/RentalCondition.js
 import CarSpecification from "../../components/CarSpecification/CarSpecification.jsx";
 import AccessoriesList from "../../components/AccessoriesList/AccessoriesList.jsx";
 import BookingForm from "../../components/BookingForm/BookingForm.jsx";
-import ContainerForDatails from "../../components/ContainerForDatails/ContainerForDatails.jsx";
+import ContainerForDetails from "../../components/ContainerForDatails/ContainerForDatails.jsx";
+import NotFound from "../../pages/NotFound/NotFound.jsx";
 
 const CarDetailsPage = () => {
   const { id } = useParams();
-  const allCar = useSelector(selectCar);
-  const car = allCar.find((car) => car.id === id);
+  const allCars = useSelector(selectCar);
+  const car = allCars.find((car) => car.id === id);
+
+  if (!car) {
+    return <NotFound />;
+  }
+
   return (
-    <ContainerForDatails>
+    <ContainerForDetails>
       <div className={style.box}>
         <div className={style.formImgBox}>
           <CarImage car={car} />
@@ -30,7 +36,7 @@ const CarDetailsPage = () => {
           </div>
         </div>
       </div>
-    </ContainerForDatails>
+    </ContainerForDetails>
   );
 };
 

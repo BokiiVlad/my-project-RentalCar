@@ -1,0 +1,30 @@
+.wrapper {
+  text-align: center;
+  padding: 80px 16px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.text {
+  font-size: 18px;
+  color: #6c757d;
+  margin-bottom: 32px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3470ff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 250ms ease-in-out;
+}
+
+.button:hover {
+  background-color: #0b44cd;
+}

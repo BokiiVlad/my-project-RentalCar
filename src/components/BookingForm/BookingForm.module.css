@@ -4,6 +4,7 @@
   line-height: 120%;
   margin-bottom: 8px;
 }
+
 .box {
   border: 1px solid #dadde1;
   border-radius: 10px;
@@ -12,6 +13,7 @@
   height: 488px;
   background: #fff;
 }
+
 .text {
   font-weight: 500;
   font-size: 16px;
@@ -19,25 +21,32 @@
   color: #8d929a;
   margin-bottom: 24px;
 }
-.input {
-  border-radius: 12px;
-  padding: 12px 20px;
-  width: 576px;
-  height: 48px;
-  background: #f7f7f7;
-}
+
+.input,
 .inputComment {
   border-radius: 12px;
-  padding: 12px 20px 56px 20px;
+  padding: 12px 20px;
+  background: #f7f7f7;
+  transition: background 250ms ease-in-out;
+}
+
+.input {
+  width: 576px;
+  height: 48px;
+}
+
+.inputComment {
   width: 576px;
   height: 88px;
-  background: #f7f7f7;
+  padding-bottom: 56px;
 }
+
 .form {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
 .button {
   color: #fff;
   display: block;
@@ -49,6 +58,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 24px;
+  transition: background 250ms ease-in-out;
 }
 
 .button:hover {

@@ -42,6 +42,7 @@
 }
 .react-datepicker__day {
   margin: 2px;
+  font-size: 14px;
 }
 .react-datepicker__current-month {
   font-family: "Inter", sans-serif; /* ваш бажаний шрифт */

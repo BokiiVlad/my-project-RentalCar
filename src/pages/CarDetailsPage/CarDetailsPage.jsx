@@ -11,10 +11,10 @@ import AccessoriesList from "../../components/AccessoriesList/AccessoriesList.js
 import BookingForm from "../../components/BookingForm/BookingForm.jsx";
 import ContainerForDetails from "../../components/ContainerForDatails/ContainerForDatails.jsx";
 import NotFound from "../../pages/NotFound/NotFound.jsx";
-import Loader from "../../components/Loader/Loader.jsx"; // компонент лоадера
+import Loader from "../../components/Loader/Loader.jsx";
 
 import { selectCar } from "../../redux/cars/selectors.js";
-import { fetchCarById } from "../../redux/cars/operations.js"; // створити цей thunk
+import { fetchCarById } from "../../redux/cars/operations.js";
 
 const CarDetailsPage = () => {
   const { id } = useParams();

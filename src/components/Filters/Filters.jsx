@@ -6,9 +6,10 @@ import { fetchBrand } from "../../redux/filters/operations.js";
 import { selectBrands } from "../../redux/filters/selectors.js";
 import { addFilters } from "../../redux/filters/filtersSlice.js";
 import FormattedMileageInput from "../FormattedMileageInput/FormattedMileageInput.jsx";
+import CustomSelect from "../CustomSelect/CustomSelect.jsx";
 
 const Filters = () => {
-  const price = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200];
+  const price = [20, 30, 40, 50, 60, 70, 80];
   const dispatch = useDispatch();
   const brandsArr = useSelector(selectBrands);
 
@@ -38,43 +39,32 @@ const Filters = () => {
     >
       <Form>
         <div className={style.box}>
-          {" "}
-          <div>
-            <label className={style.label} htmlFor="brand">
-              Car brand
-            </label>
-            <Field
-              className={style.inputPrice}
-              as="select"
-              id="brand"
-              name="brand"
-            >
-              <option value="">Choose a brand</option>
-              {brandsArr.map((el) => (
-                <option key={el} value={el}>
-                  {el}
-                </option>
-              ))}
-            </Field>
-          </div>
-          <div>
-            <label className={style.label} htmlFor="rentalPrice">
-              Price / 1 hour
-            </label>
-            <Field
-              className={style.inputPrice}
-              as="select"
-              id="rentalPrice"
-              name="rentalPrice"
-            >
-              <option value="">Choose a price</option>
-              {price.map((el) => (
-                <option key={el} value={el}>
-                  ${el}
-                </option>
-              ))}
-            </Field>
-          </div>
+          <Field name="brand">
+            {({ field, form }) => (
+              <CustomSelect
+                name="brand"
+                labelName="Car brand"
+                placeholder="Choose a brand"
+                options={brandsArr}
+                value={field.value}
+                onChange={(val) => form.setFieldValue("brand", val)}
+              />
+            )}
+          </Field>
+
+          <Field name="rentalPrice">
+            {({ field, form }) => (
+              <CustomSelect
+                name="rentalPrice"
+                labelName="Price/ 1 hour"
+                placeholder="Choose a price"
+                options={price}
+                value={field.value}
+                onChange={(val) => form.setFieldValue("rentalPrice", val)}
+              />
+            )}
+          </Field>
+
           <div>
             <label className={style.label}>Car mileage / km</label>
             <div>
@@ -82,14 +72,17 @@ const Filters = () => {
                 className={style.inputFrom}
                 name="minMileage"
                 placeholder="From"
+                // prefix={"From"}
               />
               <FormattedMileageInput
                 className={style.inputTo}
                 name="maxMileage"
                 placeholder="To"
+                // prefix={"To"}
               />
             </div>
           </div>
+
           <button className={style.but} type="submit">
             Submit
           </button>

@@ -48,6 +48,10 @@
 }
 
 .inputFrom {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #101828;
   padding: 12px 24px;
   border-right: 1px solid #dadde1;
   border-radius: 12px 0 0 12px;
@@ -58,6 +62,10 @@
 }
 
 .inputTo {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #101828;
   padding: 12px 24px;
   border-radius: 0 12px 12px 0;
   width: 160px;
@@ -74,15 +82,14 @@
   color: #101828;
 }
 
-.inputFrom,
-.inputTo {
-  -moz-appearance: textfield;
-}
-
 .inputFrom::-webkit-outer-spin-button,
 .inputFrom::-webkit-inner-spin-button,
 .inputTo::-webkit-outer-spin-button,
 .inputTo::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.mileageBox {
+  display: flex;
+  flex-direction: row;
 }

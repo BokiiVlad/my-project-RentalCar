@@ -67,18 +67,19 @@ const Filters = () => {
 
           <div>
             <label className={style.label}>Car mileage / km</label>
-            <div>
+            <div className={style.mileageBox}>
               <FormattedMileageInput
                 className={style.inputFrom}
                 name="minMileage"
                 placeholder="From"
-                // prefix={"From"}
+                prefix="From"
               />
+
               <FormattedMileageInput
                 className={style.inputTo}
                 name="maxMileage"
                 placeholder="To"
-                // prefix={"To"}
+                prefix="To"
               />
             </div>
           </div>
